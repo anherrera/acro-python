@@ -43,4 +43,4 @@ print(la_acro)
 
 tts = gTTS(text=la_acro, lang='en')
 tts.save('acro.mp3')
-os.system('vlc acro.mp3 --play-and-exit')
+os.system('cvlc acro.mp3 --play-and-exit')
