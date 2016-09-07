@@ -10,4 +10,4 @@ Set up a virtualenv if you wanna.
 
 `pip install -r requirements.txt`
 
-`python acro.py [3 to 5 letter acronym here]`
+`python acro.py "[3 to 5 letter acronym here, can use * as wildcard]"`
