@@ -8,7 +8,10 @@ import os
 args = sys.argv
 acro = args[1]
 
-combos = {3: ['noun|verb|noun', 'verb|noun|adv', 'noun|verb|adv', 'adv|verb|noun'], 4: ['noun|adv|verb|noun', 'noun|verb|noun|adv']}
+combos = {3: ['noun|verb|noun', 'verb|noun|adv', 'noun|verb|adv', 'adv|verb|noun'], 
+          4: ['noun|adv|verb|noun', 'noun|verb|noun|adv'],
+          5: ['adj|noun|adv|verb|noun', 'adj|noun|verb|noun|adv']
+}
 
 words = {}
 for type in ['noun', 'verb', 'adv', 'adj']:
@@ -40,4 +43,4 @@ print(la_acro)
 
 tts = gTTS(text=la_acro, lang='en')
 tts.save('acro.mp3')
-os.system('vlc acro.mp3 &')
+os.system('vlc acro.mp3 --play-and-exit')
