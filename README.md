@@ -9,3 +9,5 @@ Set up a virtualenv if you wanna.
 `sudo apt-get install vlc`
 
 `pip install -r requirements.txt`
+
+`python acro.py [3 to 5 letter acronym here]`
