@@ -9,7 +9,7 @@ args = sys.argv
 acro = args[1]
 
 combos = {3: ['noun|verb|noun', 'verb|noun|adv', 'noun|verb|adv', 'adv|verb|noun'], 
-          4: ['noun|adv|verb|noun', 'noun|verb|noun|adv'],
+          4: ['noun|adv|verb|noun', 'noun|verb|noun|adv', 'adj|noun|adv|verb'],
           5: ['adj|noun|adv|verb|noun', 'adj|noun|verb|noun|adv']
 }
 
@@ -34,7 +34,14 @@ poses = combo.split('|')
 final_acro = []
 for idx, pos in enumerate(poses):
 	letter = str(acro[idx]).lower()
-	words_to_choose = words[pos][letter]
+
+	words_to_choose = []
+	if letter in string.ascii_lowercase:
+		words_to_choose = words[pos][letter]
+	elif letter == '*':
+		letter = random.choice(list(string.ascii_lowercase))
+		words_to_choose = words[pos][letter]
+
 	final_acro.append(random.choice(words_to_choose))
 
 la_acro = " ".join(final_acro)
