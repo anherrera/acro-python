@@ -8,10 +8,12 @@ import os
 args = sys.argv
 acro = args[1]
 
-combos = {3: ['verb|prep|noun', 'verb|noun|adv', 'noun|verb|adv', 'noun|verb|noun', 'adj|noun|verb'],
+combos = {3: ['verb|prep|noun', 'verb|noun|adv', 'noun|verb|adv', 'noun|verb|noun', 'adj|noun|verb', 'adj|noun|noun'],
           4: ['noun|adv|verb|noun', 'noun|verb|noun|adv', 'adj|noun|adv|verb',
               'adj|noun|prep|noun', 'noun|verb|prep|noun'],
-          5: ['adj|noun|adv|verb|noun', 'adj|noun|verb|noun|adv']
+          5: ['adj|noun|adv|verb|noun', 'adj|noun|verb|noun|adv'],
+          6: ['adv|adj|noun|verb|adj|noun'],
+          7: ['adj|noun|verb|adj|adj|noun|adv', 'adv|adj|noun|verb|adj|noun|adv']
 }
 
 words = {}
